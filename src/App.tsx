@@ -1,15 +1,20 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { TodoForm } from "./components/TodoForm";
+import { AboutPage } from "./pages/AboutPage";
+import { TodosPage } from "./pages/TodosPage";
 
 const App: React.FC = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <div className="container">
-        <TodoForm />
+      <Routes>
+        <Route element={<TodosPage />} path="/" />
+        <Route element={<AboutPage />} path="/about" />
+      </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

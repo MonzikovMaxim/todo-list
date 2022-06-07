@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 export const Navbar: React.FC = () => (
   <nav>
     <div className="nav-wrapper px1">
-      <NavLink to="/" className="brand-logo">
+      <NavLink to="/todo-list/" className="brand-logo">
         React + TS
       </NavLink>
       <ul className="right hide-on-med-and-down">
         <li>
-          <NavLink to="/">Tasks</NavLink>
+          <NavLink to="/todo-list/">Tasks</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/todo-list/about">About</NavLink>
         </li>
       </ul>
     </div>
